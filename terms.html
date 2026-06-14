@@ -1,0 +1,623 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Terms of Service — Ybello</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      background: #0D0820;
+      color: #E2DFF5;
+      min-height: 100vh;
+    }
+
+    header {
+      background: #13102F;
+      border-bottom: 1px solid #2A1860;
+      padding: 20px 24px;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      position: sticky;
+      top: 0;
+      z-index: 10;
+    }
+
+    .logo-icon {
+      width: 40px;
+      height: 40px;
+      background: linear-gradient(135deg, #7B6DFF, #9B6DFF);
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .logo-bars {
+      display: flex;
+      align-items: center;
+      gap: 2px;
+      height: 20px;
+    }
+
+    .logo-bars span {
+      display: block;
+      width: 3px;
+      border-radius: 2px;
+      background: white;
+    }
+
+    .logo-name {
+      font-size: 22px;
+      font-weight: 700;
+      background: linear-gradient(90deg, #7B6DFF, #C4B0FF);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      letter-spacing: -0.5px;
+    }
+
+    .tagline {
+      font-size: 13px;
+      color: #8B8FA7;
+      margin-left: auto;
+    }
+
+    .hero {
+      background: linear-gradient(180deg, #13102F 0%, #0D0820 100%);
+      padding: 60px 24px 48px;
+      text-align: center;
+      border-bottom: 1px solid #1E1850;
+    }
+
+    .hero h1 {
+      font-size: 36px;
+      font-weight: 800;
+      letter-spacing: -1px;
+      background: linear-gradient(90deg, #C4B0FF, #7B6DFF);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      margin-bottom: 12px;
+    }
+
+    .hero p {
+      font-size: 15px;
+      color: #8B8FA7;
+      max-width: 500px;
+      margin: 0 auto;
+      line-height: 1.6;
+    }
+
+    .updated-badge {
+      display: inline-block;
+      margin-top: 16px;
+      padding: 6px 14px;
+      background: #7B6DFF20;
+      border: 1px solid #7B6DFF40;
+      border-radius: 99px;
+      font-size: 12px;
+      color: #9B8FFF;
+      font-weight: 600;
+    }
+
+    .container {
+      max-width: 760px;
+      margin: 0 auto;
+      padding: 48px 24px 80px;
+    }
+
+    .toc {
+      background: #13102F;
+      border: 1px solid #2A1860;
+      border-radius: 16px;
+      padding: 24px;
+      margin-bottom: 48px;
+    }
+
+    .toc h3 {
+      font-size: 13px;
+      font-weight: 700;
+      color: #7B6DFF;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      margin-bottom: 16px;
+    }
+
+    .toc ol {
+      list-style: none;
+      counter-reset: toc;
+    }
+
+    .toc ol li {
+      counter-increment: toc;
+      padding: 6px 0;
+      border-bottom: 1px solid #1E1850;
+    }
+
+    .toc ol li:last-child { border-bottom: none; }
+
+    .toc ol li a {
+      color: #C4B0FF;
+      text-decoration: none;
+      font-size: 14px;
+      font-weight: 500;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .toc ol li a::before {
+      content: counter(toc, decimal-leading-zero);
+      font-size: 11px;
+      font-weight: 700;
+      color: #7B6DFF;
+      min-width: 24px;
+    }
+
+    .toc ol li a:hover { color: #fff; }
+
+    section {
+      margin-bottom: 48px;
+      scroll-margin-top: 80px;
+    }
+
+    section h2 {
+      font-size: 22px;
+      font-weight: 800;
+      color: #F0ECE2;
+      letter-spacing: -0.3px;
+      margin-bottom: 16px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    section h2 .num {
+      font-size: 12px;
+      font-weight: 700;
+      color: #7B6DFF;
+      background: #7B6DFF18;
+      border: 1px solid #7B6DFF30;
+      border-radius: 6px;
+      padding: 2px 8px;
+    }
+
+    section h3 {
+      font-size: 15px;
+      font-weight: 700;
+      color: #C4B0FF;
+      margin: 20px 0 8px;
+    }
+
+    section p {
+      font-size: 14px;
+      color: #9B9BAE;
+      line-height: 1.8;
+      margin-bottom: 12px;
+    }
+
+    section ul {
+      list-style: none;
+      margin: 8px 0 16px;
+    }
+
+    section ul li {
+      font-size: 14px;
+      color: #9B9BAE;
+      line-height: 1.7;
+      padding: 4px 0 4px 20px;
+      position: relative;
+    }
+
+    section ul li::before {
+      content: '·';
+      color: #7B6DFF;
+      font-size: 18px;
+      position: absolute;
+      left: 6px;
+      top: 2px;
+    }
+
+    .info-card {
+      background: #13102F;
+      border: 1px solid #2A1860;
+      border-radius: 12px;
+      padding: 16px 20px;
+      margin: 16px 0;
+    }
+
+    .info-card.highlight {
+      border-color: #7B6DFF40;
+      background: #7B6DFF0D;
+    }
+
+    .info-card.warning {
+      border-color: #F59E0B40;
+      background: #F59E0B0D;
+    }
+
+    .info-card.danger {
+      border-color: #EF444440;
+      background: #EF44440D;
+    }
+
+    .info-card p {
+      margin: 0;
+      font-size: 13.5px;
+    }
+
+    .info-card.highlight p { color: #C4B0FF; }
+    .info-card.warning p  { color: #FCD34D; }
+    .info-card.danger p   { color: #FCA5A5; }
+
+    .divider {
+      height: 1px;
+      background: #1E1850;
+      margin: 40px 0;
+    }
+
+    a { color: #7B6DFF; text-decoration: none; }
+    a:hover { text-decoration: underline; }
+
+    footer {
+      background: #13102F;
+      border-top: 1px solid #2A1860;
+      padding: 32px 24px;
+      text-align: center;
+    }
+
+    footer p {
+      font-size: 13px;
+      color: #5A5E75;
+      line-height: 1.7;
+    }
+
+    @media (max-width: 600px) {
+      .hero h1 { font-size: 26px; }
+      .tagline { display: none; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- Header -->
+<header>
+  <div class="logo-icon">
+    <div class="logo-bars">
+      <span style="height:8px"></span>
+      <span style="height:12px"></span>
+      <span style="height:16px"></span>
+      <span style="height:20px"></span>
+      <span style="height:16px"></span>
+      <span style="height:12px"></span>
+      <span style="height:8px"></span>
+    </div>
+  </div>
+  <span class="logo-name">Ybello</span>
+  <span class="tagline">Feel the connection.</span>
+</header>
+
+<!-- Hero -->
+<div class="hero">
+  <h1>Terms of Service</h1>
+  <p>Please read these terms carefully before using Ybello. By using our app you agree to be bound by these terms.</p>
+  <span class="updated-badge">Last updated: June 15, 2026</span>
+</div>
+
+<!-- Content -->
+<div class="container">
+
+  <!-- TOC -->
+  <div class="toc">
+    <h3>Contents</h3>
+    <ol>
+      <li><a href="#s1">Acceptance of Terms</a></li>
+      <li><a href="#s2">Eligibility</a></li>
+      <li><a href="#s3">Account Registration</a></li>
+      <li><a href="#s4">User Roles</a></li>
+      <li><a href="#s5">Coins & Payments</a></li>
+      <li><a href="#s6">Host Earnings & Payouts</a></li>
+      <li><a href="#s7">Voice Calls</a></li>
+      <li><a href="#s8">Prohibited Conduct</a></li>
+      <li><a href="#s9">Content Standards</a></li>
+      <li><a href="#s10">Termination & Suspension</a></li>
+      <li><a href="#s11">Disclaimers & Limitation of Liability</a></li>
+      <li><a href="#s12">Governing Law</a></li>
+      <li><a href="#s13">Changes to Terms</a></li>
+      <li><a href="#s14">Contact Us</a></li>
+    </ol>
+  </div>
+
+  <div class="info-card highlight">
+    <p>These Terms of Service ("Terms") constitute a legally binding agreement between you and Ybello ("we", "us", "our"). By downloading, installing, or using the Ybello app, you agree to these Terms in full.</p>
+  </div>
+
+  <!-- 1 -->
+  <section id="s1">
+    <h2><span class="num">01</span> Acceptance of Terms</h2>
+    <p>By accessing or using Ybello, you confirm that you have read, understood, and agree to be bound by these Terms and our <a href="privacy-policy.html">Privacy Policy</a>. If you do not agree to these Terms, you must not use Ybello.</p>
+    <p>We reserve the right to update these Terms at any time. Continued use of the app after changes constitutes your acceptance of the updated Terms.</p>
+  </section>
+
+  <div class="divider"></div>
+
+  <!-- 2 -->
+  <section id="s2">
+    <h2><span class="num">02</span> Eligibility</h2>
+    <div class="info-card danger">
+      <p>🔞 Ybello is strictly for users who are 18 years of age or older. By using Ybello you confirm that you are at least 18 years old. Users found to be under 18 will have their accounts immediately terminated.</p>
+    </div>
+    <p>You must also:</p>
+    <ul>
+      <li>Have the legal capacity to enter into a binding agreement</li>
+      <li>Not be prohibited from using the service under applicable laws</li>
+      <li>Provide accurate and truthful information during registration</li>
+      <li>Have a valid phone number capable of receiving SMS</li>
+    </ul>
+  </section>
+
+  <div class="divider"></div>
+
+  <!-- 3 -->
+  <section id="s3">
+    <h2><span class="num">03</span> Account Registration</h2>
+    <p>To use Ybello you must register using your phone number. You are responsible for:</p>
+    <ul>
+      <li>Providing accurate information during registration</li>
+      <li>Maintaining the security of your account</li>
+      <li>All activity that occurs under your account</li>
+      <li>Notifying us immediately of any unauthorized use</li>
+    </ul>
+    <p>You may only create one account per phone number. Creating multiple accounts to circumvent bans, earn fraudulent rewards, or manipulate the platform is strictly prohibited and will result in permanent termination of all associated accounts.</p>
+    <h3>Nickname</h3>
+    <p>Your nickname must not be offensive, misleading, or impersonate another person. We reserve the right to require you to change your nickname at our discretion.</p>
+  </section>
+
+  <div class="divider"></div>
+
+  <!-- 4 -->
+  <section id="s4">
+    <h2><span class="num">04</span> User Roles</h2>
+
+    <h3>Callers</h3>
+    <p>Callers use coins to initiate voice calls with Hosts. Coins are purchased through in-app purchases and are non-refundable once used in a call. Callers agree to use the platform respectfully and in accordance with these Terms.</p>
+
+    <h3>Hosts</h3>
+    <p>Hosts earn coins per minute for voice conversations with Callers. To become a Host you must:</p>
+    <ul>
+      <li>Be at least 18 years of age</li>
+      <li>Complete identity verification (KYC) before receiving payouts</li>
+      <li>Maintain a professional and respectful demeanor during calls</li>
+      <li>Not engage in any prohibited conduct during calls</li>
+      <li>Be available during the hours you declare yourself online</li>
+    </ul>
+
+    <h3>Connect users</h3>
+    <p>Connect users can browse and interact with other users freely. Voice calls initiated by Connect users are free of charge. Standard conduct rules apply.</p>
+  </section>
+
+  <div class="divider"></div>
+
+  <!-- 5 -->
+  <section id="s5">
+    <h2><span class="num">05</span> Coins & Payments</h2>
+
+    <h3>Purchasing coins</h3>
+    <p>Coins are virtual currency used within Ybello to pay for voice calls. Coins are purchased through Google Play's in-app billing system. All purchases are final and non-refundable except where required by applicable law.</p>
+
+    <h3>Coin usage</h3>
+    <ul>
+      <li>Coins are deducted per minute during active voice calls</li>
+      <li>Calls under 30 seconds are not charged</li>
+      <li>If your coin balance reaches zero during a call the call will automatically end</li>
+      <li>Unused coins do not expire but have no monetary value</li>
+    </ul>
+
+    <h3>Refund policy</h3>
+    <p>Coins are non-refundable. If a technical error on our part results in incorrect coin deduction, contact support within 7 days and we will investigate and correct the issue.</p>
+
+    <div class="info-card warning">
+      <p>⚠️ Coins have no real-world monetary value and cannot be exchanged for cash. Only Host earnings can be withdrawn as real money.</p>
+    </div>
+
+    <h3>Fraud & abuse</h3>
+    <p>Any attempt to manipulate the coin system, including but not limited to self-calling between multiple accounts, exploiting technical vulnerabilities, or reverse-engineering the app, will result in immediate account termination and forfeiture of all coins and earnings.</p>
+  </section>
+
+  <div class="divider"></div>
+
+  <!-- 6 -->
+  <section id="s6">
+    <h2><span class="num">06</span> Host Earnings & Payouts</h2>
+
+    <h3>Earning structure</h3>
+    <p>Hosts earn a per-minute rate based on their tier level. Earnings are calculated server-side using secure timestamps and are credited to your Ybello wallet after each completed call.</p>
+
+    <h3>Tier system</h3>
+    <p>Hosts progress through Bronze, Silver, Gold, Diamond, and Elite tiers based on total minutes talked. Higher tiers earn a higher per-minute rate. Tier status is permanent and based on lifetime minutes — it never resets.</p>
+
+    <h3>Weekly bonuses</h3>
+    <p>Hosts who meet weekly talk-time targets receive bonus payments credited directly to their wallet. Weekly minutes reset every Monday at midnight IST.</p>
+
+    <h3>Payout conditions</h3>
+    <ul>
+      <li>KYC must be verified before first payout</li>
+      <li>Minimum payout threshold is ₹100</li>
+      <li>Payouts are processed via UPI or bank transfer through Razorpay</li>
+      <li>Payout requests are reviewed within 3-5 business days</li>
+      <li>Only one pending payout request is allowed at a time</li>
+    </ul>
+
+    <h3>Tax obligations</h3>
+    <p>Hosts are solely responsible for declaring and paying applicable income tax on their earnings. Ybello may deduct TDS as required by Indian tax law for earnings above the applicable threshold. We will provide TDS certificates upon request.</p>
+
+    <h3>Earnings forfeiture</h3>
+    <p>Earnings may be withheld or forfeited in cases of fraud, policy violations, or account termination. We reserve the right to reverse earnings that were generated through fraudulent activity.</p>
+  </section>
+
+  <div class="divider"></div>
+
+  <!-- 7 -->
+  <section id="s7">
+    <h2><span class="num">07</span> Voice Calls</h2>
+
+    <h3>Call conduct</h3>
+    <p>All voice calls on Ybello must comply with these Terms and applicable laws. You agree not to use voice calls to:</p>
+    <ul>
+      <li>Harass, threaten, or abuse other users</li>
+      <li>Share or solicit personal contact information</li>
+      <li>Engage in sexual, obscene, or offensive conversations</li>
+      <li>Discuss or facilitate illegal activities</li>
+      <li>Record calls without the other party's consent</li>
+      <li>Advertise products, services, or other platforms</li>
+    </ul>
+
+    <h3>Call recording</h3>
+    <p>Ybello does not record voice calls. Users are strictly prohibited from recording calls using third-party apps or devices without the explicit consent of all participants. Unauthorized recording may be a violation of applicable laws.</p>
+
+    <h3>No guarantee of availability</h3>
+    <p>We do not guarantee that any specific Host will be available at any given time. Coin charges only apply when a call successfully connects and lasts at least 30 seconds.</p>
+  </section>
+
+  <div class="divider"></div>
+
+  <!-- 8 -->
+  <section id="s8">
+    <h2><span class="num">08</span> Prohibited Conduct</h2>
+    <p>You agree not to:</p>
+    <ul>
+      <li>Create multiple accounts to circumvent bans or earn fraudulent rewards</li>
+      <li>Use automated bots, scripts, or tools to interact with the platform</li>
+      <li>Attempt to reverse-engineer, decompile, or hack the app</li>
+      <li>Manipulate coin balances, earnings, or session data through unauthorized means</li>
+      <li>Impersonate any person or entity</li>
+      <li>Use the platform for any illegal purpose</li>
+      <li>Attempt to solicit personal meetings with other users</li>
+      <li>Share, sell, or transfer your account to another person</li>
+      <li>Upload or share content that is obscene, hateful, or illegal</li>
+      <li>Coordinate with another user to generate fraudulent earnings</li>
+      <li>Use VoIP numbers or temporary phone numbers to create accounts</li>
+      <li>Abuse the report system by filing false reports</li>
+    </ul>
+
+    <div class="info-card danger">
+      <p>🚫 Violations of this section may result in immediate account termination, forfeiture of coins and earnings, and where applicable, legal action.</p>
+    </div>
+  </section>
+
+  <div class="divider"></div>
+
+  <!-- 9 -->
+  <section id="s9">
+    <h2><span class="num">09</span> Content Standards</h2>
+    <p>Ybello is a voice-only platform. While we do not host user-generated content beyond profile information, all interactions on our platform must comply with the following standards:</p>
+    <ul>
+      <li>Conversations must be respectful and lawful</li>
+      <li>No hate speech, discrimination, or content targeting individuals based on race, gender, religion, nationality, or sexual orientation</li>
+      <li>No sexual content involving minors under any circumstances</li>
+      <li>No facilitation of violence, self-harm, or illegal activities</li>
+      <li>Profile nicknames and tags must not be offensive or misleading</li>
+    </ul>
+    <p>We reserve the right to remove any content and suspend or terminate accounts that violate these standards.</p>
+  </section>
+
+  <div class="divider"></div>
+
+  <!-- 10 -->
+  <section id="s10">
+    <h2><span class="num">10</span> Termination & Suspension</h2>
+
+    <h3>By us</h3>
+    <p>We reserve the right to suspend or terminate your account at any time, with or without notice, for:</p>
+    <ul>
+      <li>Violation of these Terms</li>
+      <li>Fraudulent activity</li>
+      <li>Abusive behavior toward other users</li>
+      <li>Providing false information during registration or KYC</li>
+      <li>Any activity that harms the platform or other users</li>
+    </ul>
+
+    <h3>By you</h3>
+    <p>You may delete your account at any time through the app settings. Upon deletion your personal data will be removed within 30 days except where retention is legally required. Unused coins are forfeited upon account deletion. Pending verified earnings will be processed for payout within 14 days of account deletion request.</p>
+
+    <h3>Effect of termination</h3>
+    <p>Upon termination all licenses granted to you under these Terms cease immediately. Provisions that by their nature should survive termination shall survive, including payment obligations, fraud provisions, and dispute resolution clauses.</p>
+  </section>
+
+  <div class="divider"></div>
+
+  <!-- 11 -->
+  <section id="s11">
+    <h2><span class="num">11</span> Disclaimers & Limitation of Liability</h2>
+
+    <h3>Service availability</h3>
+    <p>Ybello is provided "as is" and "as available" without warranties of any kind. We do not guarantee uninterrupted or error-free service. We are not liable for any loss resulting from service downtime or technical failures.</p>
+
+    <h3>User interactions</h3>
+    <p>We are not responsible for the conduct of any user on or off the platform. Interactions between users are solely their responsibility. We strongly encourage users to report any abusive or inappropriate behavior using the in-app report feature.</p>
+
+    <h3>Limitation of liability</h3>
+    <p>To the maximum extent permitted by law, Ybello shall not be liable for any indirect, incidental, special, consequential, or punitive damages, including loss of coins, earnings, data, or goodwill, arising from your use of or inability to use the service.</p>
+
+    <h3>Indemnification</h3>
+    <p>You agree to indemnify and hold Ybello harmless from any claims, losses, or damages arising from your violation of these Terms, your use of the service, or your interactions with other users.</p>
+  </section>
+
+  <div class="divider"></div>
+
+  <!-- 12 -->
+  <section id="s12">
+    <h2><span class="num">12</span> Governing Law</h2>
+    <p>These Terms shall be governed by and construed in accordance with the laws of India. Any disputes arising under these Terms shall be subject to the exclusive jurisdiction of the courts located in Kerala, India.</p>
+    <p>If any provision of these Terms is found to be unenforceable, the remaining provisions shall continue in full force and effect.</p>
+  </section>
+
+  <div class="divider"></div>
+
+  <!-- 13 -->
+  <section id="s13">
+    <h2><span class="num">13</span> Changes to Terms</h2>
+    <p>We may update these Terms at any time. We will notify you of material changes through:</p>
+    <ul>
+      <li>A push notification through the Ybello app</li>
+      <li>A prominent notice displayed within the app</li>
+      <li>Updating the "Last updated" date at the top of this page</li>
+    </ul>
+    <p>Your continued use of Ybello after the effective date of any changes constitutes your acceptance of the revised Terms. If you do not agree to the updated Terms you must stop using the app and delete your account.</p>
+  </section>
+
+  <div class="divider"></div>
+
+  <!-- 14 -->
+  <section id="s14">
+    <h2><span class="num">14</span> Contact Us</h2>
+    <p>If you have any questions about these Terms of Service please contact us:</p>
+
+    <div class="info-card">
+      <p>
+        <strong style="color:#C4B0FF">Ybello</strong><br>
+        Email: <a href="mailto:legal@ybello.com">legal@ybello.com</a><br>
+        Support: <a href="mailto:support@ybello.com">support@ybello.com</a><br>
+        Website: <a href="https://ybello.com">ybello.com</a>
+      </p>
+    </div>
+
+    <p>We aim to respond to all legal inquiries within 5 business days.</p>
+  </section>
+
+</div>
+
+<!-- Footer -->
+<footer>
+  <p>
+    © 2026 Ybello. All rights reserved.<br>
+    <a href="privacy-policy.html">Privacy Policy</a> &nbsp;·&nbsp;
+    <a href="terms.html">Terms of Service</a> &nbsp;·&nbsp;
+    <a href="mailto:support@ybello.com">Contact</a>
+  </p>
+</footer>
+
+</body>
+</html>
